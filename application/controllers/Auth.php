@@ -66,6 +66,8 @@ class Auth extends CI_Controller
 	{
 		$this->data['title'] = $this->lang->line('login_heading');
 
+		//$this->load->library('recaptcha');
+		//$recaptcha = $this->recaptcha->create_box();
 		// validate form input
 		$this->form_validation->set_rules('identity', str_replace(':', '', $this->lang->line('login_identity_label')), 'required');
 		$this->form_validation->set_rules('password', str_replace(':', '', $this->lang->line('login_password_label')), 'required');
